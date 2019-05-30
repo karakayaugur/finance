@@ -1,0 +1,61 @@
+@import "../../scss/utils/variables";
+@import "../../scss/utils/mixins";
+
+.svg-btn {
+  display: flex;
+  flex-grow: 1;
+  align-items: stretch;
+  text-decoration: none;
+  padding: 0.9rem 2.5rem;
+  align-items: center;
+  color: #a2a3b7;
+  &__icon {
+    font-size: 1.5rem;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    display: flex;
+    flex-shrink: 0;
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.src-btn {
+  display: flex;
+  flex-grow: 1;
+  align-items: stretch;
+  text-decoration: none;
+  align-items: center;
+  color: #a2a3b7;
+  &__icon {
+    font-size: 2rem;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    display: flex;
+    flex-shrink: 0;
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+
+.f11 {
+  font-size: 1.1rem;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.ngx-pagination .current {
+  padding: 0.1875rem 0.625rem;
+  background: $font-color-base !important;
+  color: #fefefe;
+  cursor: default;
+}

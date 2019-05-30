@@ -1,0 +1,29 @@
+//BREAKPOINTS  
+$phone: 576px;
+$tablet: 768px;
+$big: 1200px;
+
+@mixin respond($breakpoint){
+    @if $breakpoint==phone  {
+        @media (max-width: $phone){
+            @content;
+        }            
+    }
+    @if $breakpoint==tablet  {
+        @media (max-width: $tablet){
+            @content;
+        }            
+    }
+    @if $breakpoint==big  {
+        @media (max-width: $big){
+            @content;
+        }            
+    }
+}
+
+@mixin transition($transition...) {
+    transition: $transition;
+    -o-transition: $transition;
+    -moz-transition: $transition;
+    -webkit-transition: $transition;
+}

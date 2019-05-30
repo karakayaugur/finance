@@ -1,0 +1,105 @@
+@import '../../scss/utils/variables';
+@import '../../scss/utils/mixins';
+
+.aside {
+    height: 100%;
+    border-right: 1px solid #ffffff; 
+    background-color: #1e1e2d;
+    width: 26.5rem;
+    @include transition(.2s);
+    &__brand {
+        padding: 0 2.5rem;
+        height: 6.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
+    }
+    &__brand-logo {
+    }
+    &__brand-toggler {        
+        font-size: 1.5rem;
+        width: 1em;
+        height: 1em;
+        fill: currentColor;
+        cursor: pointer;
+        @include transition(.2s);
+        @include respond(phone){
+         font-size: 3rem;
+        }
+        &:hover {
+            color: #ffffff;
+        }
+    }  
+    &--mini {
+        width: 7rem;
+        @include respond(phone){
+            width:0;
+        }
+    }
+    &--mini &__brand-logo {
+        display: none;
+    }
+}
+
+.sidenav {
+    margin: 0;
+    padding: 1.5rem 0;    
+    list-style: none;    
+    padding-inline-start: 0;
+    width: 100%;
+    @include transition(.2s);
+    &--container{
+        margin: 1.5rem 0;
+        @include respond(phone) {
+            margin: 0;
+        }
+    }
+    &__item {
+        width: 100%;
+        height: 4.4rem;
+    }
+    &__link {
+        display: flex;
+        flex-grow: 1;
+        align-items: stretch;
+        text-decoration: none;
+        padding: .9rem 2.5rem;
+        align-items: center;
+        color:#A2A3B7;
+        @include transition(.2s);
+        &:hover .sidenav__link-icon{
+            color: #5867dd;
+        }
+        &:hover .sidenav__link-text, &.active .sidenav__link-text{
+            color: #ececf5;
+        }
+    }
+    &__link-icon {        
+        font-size: 2rem;
+        width: 1em;
+        height: 1em;
+        fill: currentColor;
+        display: flex;
+        flex-shrink: 0;
+        @include respond(phone){
+            font-size: 2.5rem;
+        }
+    }
+    &__link-text {       
+        font-size:1rem; 
+        margin-left: 1.5rem;
+        text-transform: capitalize;
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        white-space: nowrap;
+    }    
+    &--mini {
+        @include respond(phone) {
+            display: none;
+        }
+    }
+    &--mini &__link-text{
+        display: none;        
+    }    
+}

@@ -1,0 +1,46 @@
+<div class="aside" [ngClass]="{'aside--mini': _sidebar}">
+    <div class="aside__brand">
+        <h5 class="aside__brand-logo">Finance</h5>
+        <svg class="aside__brand-toggler" (click)="sidebarToggle()">
+            <use *ngIf="!_sidebar" href="assets/svg/svg-sprite.svg#back"></use>
+            <use *ngIf="_sidebar" href="assets/svg/svg-sprite.svg#next"></use>
+        </svg>
+    </div>
+    <div class="sidenav--container">
+        <ul class="sidenav" [ngClass]="{'sidenav--mini': _sidebar}">
+            <!-- <li class="sidenav__item">
+                <a class="sidenav__link" [routerLink]="[ '/dashboard' ]" routerLinkActive="active">
+                    <svg class="sidenav__link-icon">
+                        <use href="assets/svg/svg-sprite.svg#home"></use>
+                    </svg>
+                    <span class="sidenav__link-text">Dashboard</span>
+                </a>
+            </li> -->
+            <li class="sidenav__item">
+                <a class="sidenav__link" [routerLink]="[ '/reports' ]" routerLinkActive="active">
+                    <svg class="sidenav__link-icon">
+                        <use href="assets/svg/svg-sprite.svg#clipboards"></use>
+                    </svg>
+                    <span class="sidenav__link-text">Reports</span>
+                </a>
+            </li>
+            <li class="sidenav__item">
+                <a class="sidenav__link" [routerLink]="[ '/transactions' ]" routerLinkActive="active">
+                    <svg class="sidenav__link-icon">
+                        <use href="assets/svg/svg-sprite.svg#search"></use>
+                    </svg>
+                    <span class="sidenav__link-text">Query</span>
+                </a>
+            </li>
+            <li class="sidenav__item">
+                <a class="sidenav__link" [routerLink]="[ '/login' ]" routerLinkActive="active">
+                    <svg class="sidenav__link-icon">
+                        <use href="assets/svg/svg-sprite.svg#logout"></use>
+                    </svg>
+                    <span class="sidenav__link-text">Logout</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>

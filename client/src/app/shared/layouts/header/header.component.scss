@@ -1,0 +1,61 @@
+@import '../../scss/utils/variables';
+@import '../../scss/utils/mixins';
+
+.header {
+    height: 6.5rem;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    //background-image: linear-gradient(268deg, #e0e5ea, #edf1f5 55%, #edf1f5);
+    justify-content: space-between;
+    
+    &__toggler {        
+        width: 1em;
+        height: 1em;
+        font-size: 3rem;
+        fill: currentColor;
+        display: none;        
+        cursor: pointer;
+        @include transition(.2s);
+        @include respond(phone){
+            display: block;
+        }
+    }
+    &__tools {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        padding:0 .5rem;
+    }  
+    &__link {        
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        color:#5867dd;
+        cursor:pointer;        
+        &:hover .header__link-icon {            
+            transform: scale(1.1);
+        }             
+    }
+    &__link-icon {    
+        @include transition(.2s);    
+        font-size: 1.5rem;
+        width: 1em;
+        height: 1em;
+        fill: currentColor;
+        display: flex;
+        flex-shrink: 0;
+        @include respond(phone){
+            font-size: 2.5rem;
+        }
+    }
+    &__link-text {  
+        font-size:1.2rem;      
+        margin:0 .5rem;
+        text-transform: capitalize;
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        white-space: nowrap;        
+    }  
+}

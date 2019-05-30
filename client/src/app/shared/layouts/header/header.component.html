@@ -1,0 +1,15 @@
+<div class="header">
+    <svg class="header__toggler" *ngIf="_sidebar" (click)="sidebarToggle()">
+        <use href="assets/svg/svg-sprite.svg#next"></use>
+    </svg>
+    <div class="header__tools">
+        <div class="header__link" [routerLink]="[ '/login' ]" >
+            <span class="header__link-text">
+                Logout
+            </span>
+            <svg class="header__link-icon">
+                <use href="assets/svg/svg-sprite.svg#logout"></use>
+            </svg>
+        </div>
+    </div>
+</div>
